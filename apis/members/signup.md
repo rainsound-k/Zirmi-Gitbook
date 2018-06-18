@@ -56,9 +56,8 @@ ex\) aaa@aaa.com
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
+
 email or password1 or password2 가 없는 경우.
-{% endapi-method-response-example-description %}
 
 ```javascript
 {
@@ -70,12 +69,10 @@ email or password1 or password2 가 없는 경우.
     ],
     "password2": [
         "이 필드는 필수 항목입니다."
-    ],
+    ]
 }
 ```
-{% api-method-response-example-description %}
 email or password1 or password2 의 값이 빈칸일 경우.  
-{% endapi-method-response-example-description %}
 
 ```javascript
 {
