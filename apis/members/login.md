@@ -43,12 +43,57 @@ Login
 
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
-case1: .
+case1: email or password가 없는 경우.
+case2: email or password의 값이 빈칸일 경우.
+case3: email 형식이 아닐 경우.
+case4: email은 맞고 password가 틀렸을 경우.
+case5: email이 틀렸을 경우.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    "message": "Ain't no cake like that."
+    "_comment": "case1",
+    "email": [
+        "이 필드는 필수 항목입니다."
+    ],
+    "password": [
+        "이 필드는 필수 항목입니다."
+    ]
+}
+
+
+{
+    "_comment": "case2",
+    "email": [
+        "이 필드는 blank일 수 없습니다."
+    ],
+    "password": [
+        "이 필드는 blank일 수 없습니다."
+    ]
+}
+
+
+{
+    "_comment": "case3",
+    "email": [
+        "유효한 이메일 주소를 입력하십시오."
+    ]
+}
+
+
+{
+    "_comment": "case4",
+    "detail": [
+        "올바르지 않은 password 입니다"
+    ]
+}
+
+
+{
+    "_comment": "case5",
+    "detail": [
+        "가입된 email이 없습니다"
+    ]
 }
 ```
 {% endapi-method-response-example %}
