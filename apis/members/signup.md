@@ -73,9 +73,6 @@ email or password1 or password2 가 없는 경우.
     ],
 }
 ```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
 email or password1 or password2 의 값이 빈칸일 경우.  
 {% endapi-method-response-example-description %}
