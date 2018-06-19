@@ -18,35 +18,73 @@ Token &lt;발급 받은 토큰 key&gt;
 {% endapi-method-headers %}
 
 {% api-method-form-data-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-parameter name="item\_pk" type="string" required=true %}
+item pk 값 
 {% endapi-method-parameter %}
 {% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+아이템 정상적으로 추가.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    "name": "Cake's name",
-    "recipe": "Cake's recipe name",
-    "cake": "Binary cake"
+    "detail": "내 아이템에 추가되었습니다"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+case1: item_pk가 없는 경우.     
+case2: item_pk의 user일 경우.
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "_comment": "case1",
+    "detail": "item_pk를 입력해주세요"
+}
+
+
+{
+    "_comment": "case2",
+    "detail": "이미 존재합니다"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+case1: header에 Token 값이 없을 경우.  
+case2: Token 값이 틀렸을 경우.
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "_comment": "case1",
+    "detail": "자격 인증데이터(authentication credentials)가 제공되지 않았습니다."
+}
+
+
+{
+    "_comment": "case2",
+    "detail": "토큰이 유효하지 않습니다."
 }
 ```
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
-Could not find a cake matching this query.
+없는 item\_pk 값일 경우.   
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    "message": "Ain't no cake like that."
+    "detail": "찾을 수 없습니다."
 }
 ```
 {% endapi-method-response-example %}
