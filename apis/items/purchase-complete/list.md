@@ -6,20 +6,20 @@ List
 {% endapi-method-summary %}
 
 {% api-method-description %}
-구매 완료한 아이템 리스를 위한 API 
+구매 완료한 아이템 리스트를 위한 API  
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-Token &lt;발급 받은 토큰 key&gt; 
+Token &lt;발급 받은 토큰 key&gt;
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="page" type="integer" %}
-page 숫자\(page 당 아이템 5개\) 
+page 숫자\(page 당 아이템 5개\)
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -92,11 +92,12 @@ page 숫자\(page 당 아이템 5개\)
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=401 %} 
-{% api-method-response-example-description %} 
-case1: header에 Token 값이 없을 경우.   
-case2: Token 값이 틀렸을 경우. 
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+case1: header에 Token 값이 없을 경우.  
+case2: Token 값이 틀렸을 경우.
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
     "_comment": "case1",
@@ -113,6 +114,4 @@ case2: Token 값이 틀렸을 경우.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 
