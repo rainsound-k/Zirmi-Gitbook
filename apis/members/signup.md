@@ -37,7 +37,7 @@ ex\) aaa@aaa.com
 남성 : m  
 여성 : f
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
