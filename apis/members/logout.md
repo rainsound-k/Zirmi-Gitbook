@@ -1,62 +1,52 @@
 # Logout
 
-{% api-method method="get" host="https://api.cakes.com" path="/v1/cakes/:id" %}
+{% api-method method="post" host="https://zirmi.com" path="/api/members/logout/" %}
 {% api-method-summary %}
-Get Cakes
+Logout
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get free cakes.
+ 로그아웃을 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" %}
-ID of the cake to get, for free of course.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-Authentication token to track down who is emptying our stocks.
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Token &lt;발급 받은 토큰 key&gt;
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-query-parameters %}
-{% api-method-parameter name="recipe" type="string" %}
-The API will do its best to find a cake matching the provided recipe.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="gluten" type="boolean" %}
-Whether the cake should be gluten-free or not.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+로그아웃 성공.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    "name": "Cake's name",
-    "recipe": "Cake's recipe name",
-    "cake": "Binary cake"
+    "detail": "정상적으로 로그아웃 되었습니다"
 }
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=404 %}
+{% api-method-response-example httpCode=401 %}
 {% api-method-response-example-description %}
-Could not find a cake matching this query.
+case1: header에 Token 값이 없을 경우.  
+case2: Token 값이 틀렸을 경우. 
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    "message": "Ain't no cake like that."
+    "_comment": "case1",
+    "detail": "자격 인증데이터(authentication credentials)가 제공되지 않았습니다."
+}
+
+
+{
+    "_comment": "case2",
+    "detail": "토큰이 유효하지 않습니다."
 }
 ```
 {% endapi-method-response-example %}

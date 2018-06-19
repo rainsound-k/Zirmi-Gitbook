@@ -6,18 +6,18 @@ Login
 {% endapi-method-summary %}
 
 {% api-method-description %}
- 로그인을 위한 API 
+로그인을 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="email" type="string" required=true %}
- 이메일 
+이메일
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="password" type="string" required=true %}
-비밀번호 
+비밀번호
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -25,7 +25,7 @@ Login
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-로그인 성공. 
+로그인 성공.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -41,12 +41,12 @@ Login
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=404 %}
+{% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-case1: email or password가 없는 경우.
-case2: email or password의 값이 빈칸일 경우.
-case3: email 형식이 아닐 경우.
-case4: email은 맞고 password가 틀렸을 경우.
+case1: email or password가 없는 경우.   
+case2: email or password의 값이 빈칸일 경우.   
+case3: email 형식이 아닐 경우.   
+case4: email은 맞고 password가 틀렸을 경우.   
 case5: email이 틀렸을 경우.
 {% endapi-method-response-example-description %}
 
@@ -100,6 +100,4 @@ case5: email이 틀렸을 경우.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 
