@@ -39,7 +39,7 @@ AuthToken for facebook
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-case1: access\_token 이 없을 경우.   
+case1: access\_token이 없을 경우.   
 case2: access\_token의 값이 빈칸일 경우.   
 case3: access\_token이 틀을 경우. 
 {% endapi-method-response-example-description %}

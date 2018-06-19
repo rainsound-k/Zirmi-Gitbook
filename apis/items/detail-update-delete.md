@@ -6,14 +6,14 @@ Detail
 {% endapi-method-summary %}
 
 {% api-method-description %}
-아이템 detail을 위한 API 
+아이템 detail을 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="item\_pk" type="integer" required=true %}
-item pk 값 
+item pk 값
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -54,53 +54,22 @@ Update
 {% endapi-method-summary %}
 
 {% api-method-description %}
-아이템 update를 위한 API 
+아이템 update를 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="item\_pk" type="integer" required=true %}
-item pk 값 
+item pk 값
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-Token &lt;발급 받은 토큰 key&gt; 
+Token &lt;발급 받은 토큰 key&gt;
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-parameter name="price" type="integer" required=true %}
-아이템 가격
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="category" type="string" required=true %}
-패션의류/잡화: a   
-유아용품: b  
-뷰티: c   
-주방/생활용품: d   
-디지털/가전제품: e   
-가구/인테리어: f   
-운동용품: g   
-여행: h   
-도서/음반/공연: i   
-자동차용품: j   
-기타: k
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="purchase\_url" type="string" required=false %}
-상품 구매 링크\(URL 형식\)
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="img" type="object" required=false %}
-상품 이미지\(파일 업로드\)
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="public\_visibility" type="boolean" required=false %}
-전체 공개 여부\(defaut=True\)
-{% endapi-method-parameter %}
-{% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -132,12 +101,13 @@ Token &lt;발급 받은 토큰 key&gt;
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-case1: header에 Token 값이 없을 경우.   
+case1: header에 Token 값이 없을 경우.  
 case2: Token 값이 틀렸을 경우.  
-case3: name or price or category 값이 없는 경우.   
-case4: 아이템 user가 아닐 경우.   
-case5: 없는 item_pk 값일 경우.  
+case3: name or price or category 값이 없는 경우.  
+case4: 아이템 user가 아닐 경우.  
+case5: 없는 item\_pk 값일 경우.
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
     "_comment": "case1",
@@ -187,20 +157,20 @@ Delete
 {% endapi-method-summary %}
 
 {% api-method-description %}
-아이템 delete를 위한 API 
+아이템 delete를 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="item\_pk" type="integer" required=true %}
-item pk 값 
+item pk 값
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-Token &lt;발급 받은 토큰 key&gt; 
+Token &lt;발급 받은 토큰 key&gt;
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -213,38 +183,6 @@ Token &lt;발급 받은 토큰 key&gt;
 
 ```javascript
 
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example-description %}
-case1: header에 Token 값이 없을 경우.   
-case2: Token 값이 틀렸을 경우.     
-case3: 아이템 user가 아닐 경우.   
-case4: 없는 item_pk 값일 경우. 
-{% endapi-method-response-example-description %}
-```javascript
-{
-    "_comment": "case1",
-    "detail": "자격 인증데이터(authentication credentials)가 제공되지 않았습니다."
-}
-
-
-{
-    "_comment": "case2",
-    "detail": "토큰이 유효하지 않습니다."
-}
-
-
-{
-    "_comment": "case3",
-    "detail": "이 작업을 수행할 권한(permission)이 없습니다."
-}
-
-
-{
-    "_comment": "case4",
-    "detail": "찾을 수 없습니다."
-}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
