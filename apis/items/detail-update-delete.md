@@ -6,7 +6,7 @@ Detail
 {% endapi-method-summary %}
 
 {% api-method-description %}
-아이템 detail을 위한 API
+아이템 상세 정보를 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -54,7 +54,7 @@ Update
 {% endapi-method-summary %}
 
 {% api-method-description %}
-아이템 update를 위한 API
+아이템 업데이를 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -101,11 +101,28 @@ Token &lt;발급 받은 토큰 key&gt;
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
+name or price or category가 없는 경우.  
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "category": [
+        "이 필드는 필수 항목입니다."
+    ],
+    "name": [
+        "이 필드는 필수 항목입니다."
+    ],
+    "price": [
+         "이 필드는 필수 항목입니다."
+     ]
+ }
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
 case1: header에 Token 값이 없을 경우.  
-case2: Token 값이 틀렸을 경우.  
-case3: name or price or category가 없는 경우.  
-case4: 아이템 user가 아닐 경우.  
-case5: 없는 item\_pk 값일 경우.
+case2: Token 값이 틀렸을 경우.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -119,30 +136,28 @@ case5: 없는 item\_pk 값일 경우.
     "_comment": "case2",
     "detail": "토큰이 유효하지 않습니다."
 }
+```
+{% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+아이템 user가 아닐 경우.  
+{% endapi-method-response-example-description %}
 
+```javascript
 {
-    "_comment": "case3",
-    "category": [
-        "이 필드는 필수 항목입니다."
-    ],
-    "name": [
-        "이 필드는 필수 항목입니다."
-    ],
-    "price": [
-        "이 필드는 필수 항목입니다."
-    ] 
-}
-
-
-{
-    "_comment": "case4",
     "detail": "이 작업을 수행할 권한(permission)이 없습니다."
 }
+```
+{% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+없는 item\_pk 값일 경우.   
+{% endapi-method-response-example-description %}
 
+```javascript
 {
-    "_comment": "case5",
     "detail": "찾을 수 없습니다."
 }
 ```
@@ -157,7 +172,7 @@ Delete
 {% endapi-method-summary %}
 
 {% api-method-description %}
-아이템 delete를 위한 API
+아이템 삭를 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -186,12 +201,10 @@ Token &lt;발급 받은 토큰 key&gt;
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=400 %}
+{% api-method-response-example httpCode=401 %}
 {% api-method-response-example-description %}
 case1: header에 Token 값이 없을 경우.  
-case2: Token 값이 틀렸을 경우.  
-case3: 아이템 user가 아닐 경우.  
-case4: 없는 item\_pk 값일 경우.
+case2: Token 값이 틀렸을 경우.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -205,16 +218,28 @@ case4: 없는 item\_pk 값일 경우.
     "_comment": "case2",
     "detail": "토큰이 유효하지 않습니다."
 }
+```
+{% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+ 아이템의 user가 아닐 경우.  
+{% endapi-method-response-example-description %}
 
+```javascript
 {
-    "_comment": "case3",
     "detail": "이 작업을 수행할 권한(permission)이 없습니다."
 }
+```
+{% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+ 없는 item\_pk 값일 경우.  
+{% endapi-method-response-example-description %}
 
+```javascript
 {
-    "_comment": "case4",
     "detail": "찾을 수 없습니다."
 }
 ```

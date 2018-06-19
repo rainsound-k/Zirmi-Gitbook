@@ -6,7 +6,7 @@ User detail
 {% endapi-method-summary %}
 
 {% api-method-description %}
- 유저 정보를 위한 API 
+ 유저 상세 정보를 위한 API 
 {% endapi-method-description %}
 
 {% api-method-spec %}

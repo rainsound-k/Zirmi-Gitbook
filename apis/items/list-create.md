@@ -6,7 +6,7 @@ List
 {% endapi-method-summary %}
 
 {% api-method-description %}
-아이템 리스트를 위한 API
+아이템 리스트 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -227,9 +227,20 @@ Token &lt;발급 받은 토큰 key&gt;
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
+name or price or category가 없는 경우.  
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "detail": "name, price, category를 입력해주세요"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
 case1: header에 Token 값이 없을 경우.   
-case2: Token 값이 틀렸을 경우.  
-case3: name or price or category 가 없는 경우. 
+case2: Token 값이 틀렸을 경우.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -242,12 +253,6 @@ case3: name or price or category 가 없는 경우.
 {
     "_comment": "case2",
     "detail": "토큰이 유효하지 않습니다."
-}
-
-
-{
-    "_comment": "case3",
-    "detail": "name, price, category를 입력해주세요"
 }
 ```
 {% endapi-method-response-example %}

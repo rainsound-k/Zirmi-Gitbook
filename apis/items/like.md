@@ -6,20 +6,20 @@ Like
 {% endapi-method-summary %}
 
 {% api-method-description %}
-아이템 좋아요를 위한 API 
+아이템 좋아요를 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="item\_pk" type="integer" required=true %}
-item pk 값 
+item pk 값
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-Token &lt;발급 받은 토큰 key&gt; 
+Token &lt;발급 받은 토큰 key&gt;
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -27,8 +27,8 @@ Token &lt;발급 받은 토큰 key&gt;
 {% api-method-response %}
 {% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-case1: 좋아요.   
-case2: 좋아요 취소. 
+case1: 좋아요.  
+case2: 좋아요 취소.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -97,9 +97,10 @@ case2: 좋아요 취소.
 
 {% api-method-response-example httpCode=401 %}
 {% api-method-response-example-description %}
-case1: header에 Token 값이 없을 경우.   
-case2: Token 값이 틀렸을 경우.  
+case1: header에 Token 값이 없을 경우.  
+case2: Token 값이 틀렸을 경우.
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
     "_comment": "case1",
@@ -116,8 +117,9 @@ case2: Token 값이 틀렸을 경우.
 
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
-없는 item_pk 값일 경우.
+없는 item\_pk 값일 경우.
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
     "detail": "찾을 수 없습니다."
@@ -127,6 +129,4 @@ case2: Token 값이 틀렸을 경우.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 
