@@ -43,10 +43,10 @@ Login
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-case1: email or password가 없는 경우.   
-case2: email or password의 값이 빈칸일 경우.   
-case3: email 형식이 아닐 경우.   
-case4: email은 맞고 password가 틀렸을 경우.   
+case1: email or password가 없는 경우.  
+case2: email or password의 값이 빈칸일 경우.  
+case3: email 형식이 아닐 경우.  
+case4: email은 맞고 password가 틀렸을 경우.  
 case5: email이 틀렸을 경우.
 {% endapi-method-response-example-description %}
 

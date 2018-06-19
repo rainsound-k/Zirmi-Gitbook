@@ -58,11 +58,11 @@ ex\) aaa@aaa.com
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
 case1: email or password1 or password2가 없는 경우.  
-case2: email or password1 or password2의 값이 빈칸일 경우.   
-case3: email 형식이 아닐 경우.   
-case4: 이미 email이 존재할 경우.   
-case5: password1과 password2의 값이 다를 경우.   
-case6: password1 or password2의 글자수가 6자 미만일 경우. 
+case2: email or password1 or password2의 값이 빈칸일 경우.  
+case3: email 형식이 아닐 경우.  
+case4: 이미 email이 존재할 경우.  
+case5: password1과 password2의 값이 다를 경우.  
+case6: password1 or password2의 글자수가 6자 미만일 경우.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -132,6 +132,4 @@ case6: password1 or password2의 글자수가 6자 미만일 경우.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 
