@@ -103,7 +103,7 @@ Token &lt;발급 받은 토큰 key&gt;
 {% api-method-response-example-description %}
 case1: header에 Token 값이 없을 경우.  
 case2: Token 값이 틀렸을 경우.  
-case3: name or price or category가 없 경우.  
+case3: name or price or category가 없는 경우.  
 case4: 아이템 user가 아닐 경우.  
 case5: 없는 item\_pk 값일 경우.
 {% endapi-method-response-example-description %}
@@ -183,6 +183,39 @@ Token &lt;발급 받은 토큰 key&gt;
 
 ```javascript
 
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+case1: header에 Token 값이 없을 경우.  
+case2: Token 값이 틀렸을 경우.  
+case3: 아이템 user가 아닐 경우.  
+case4: 없는 item\_pk 값일 경우.
+{% endapi-method-response-example-description %}
+```javascript
+{
+    "_comment": "case1",
+    "detail": "자격 인증데이터(authentication credentials)가 제공되지 않았습니다."
+}
+
+
+{
+    "_comment": "case2",
+    "detail": "토큰이 유효하지 않습니다."
+}
+
+
+{
+    "_comment": "case3",
+    "detail": "이 작업을 수행할 권한(permission)이 없습니다."
+}
+
+
+{
+    "_comment": "case4",
+    "detail": "찾을 수 없습니다."
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
