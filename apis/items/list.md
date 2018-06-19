@@ -44,9 +44,96 @@ List
 
 ```javascript
 {
-    "name": "Cake's name",
-    "recipe": "Cake's recipe name",
-    "cake": "Binary cake"
+    "count": 7,
+    "next": "http://localhost:8000/api/items/?page=2",
+    "previous": null,
+    "results": [
+        {
+            "id": 7,
+            "user": {
+                "email": "swkang@fastcampus.co.kr"
+            },
+            "public_visibility": true,
+            "like_users": [],
+            "category": "디지털/가전제품",
+            "is_purchase": false,
+            "purchase_date": null,
+            "created_time": "2018-06-19T12:02:52.328046",
+            "modified_time": "2018-06-19T12:02:52.330643",
+            "name": "카도 미니 가시광촉매 차량용 공기청정기 실버",
+            "purchase_url": "https://www.coupang.com/vp/products/29576028",
+            "price": 253920,
+            "img": "http://localhost:8000/media/items/6bf2c6f5-90c6-4d47-81fa-71e7c4ed4ad3.jpeg"
+        },
+        {
+            "id": 6,
+            "user": {
+                "email": "swkang@fastcampus.co.kr"
+            },
+            "public_visibility": true,
+            "like_users": [],
+            "category": "기타",
+            "is_purchase": false,
+            "purchase_date": null,
+            "created_time": "2018-06-19T12:02:36.235813",
+            "modified_time": "2018-06-19T12:02:36.238361",
+            "name": "ESR 뉴아이패드 6세대 2018 스마트커버 케이스",
+            "purchase_url": "http://naver.me/GiQ5EWa7",
+            "price": 25900,
+            "img": "http://localhost:8000/media/items/9596208268224416_263489014.jpeg"
+        },
+        {
+            "id": 5,
+            "user": {
+                "email": "swkang@fastcampus.co.kr"
+            },
+            "public_visibility": true,
+            "like_users": [],
+            "category": "기타",
+            "is_purchase": false,
+            "purchase_date": null,
+            "created_time": "2018-06-19T12:02:17.918448",
+            "modified_time": "2018-06-19T12:02:17.922059",
+            "name": "2017 뉴아이패드 9.7 필름 강화유리 5세대",
+            "purchase_url": "http://itempage3.auction.co.kr/DetailView.aspx?ItemNo=B527111076",
+            "price": 11500,
+            "img": "http://localhost:8000/media/items/15234081e6.jpeg"
+        },
+        {
+            "id": 4,
+            "user": {
+                "email": "swkang@fastcampus.co.kr"
+            },
+            "public_visibility": true,
+            "like_users": [],
+            "category": "디지털/가전제품",
+            "is_purchase": false,
+            "purchase_date": null,
+            "created_time": "2018-06-19T12:01:41.667941",
+            "modified_time": "2018-06-19T12:01:41.669967",
+            "name": "애플 에어팟 블루투스이어폰 AirPods",
+            "purchase_url": "http://shopping.interpark.com/product/productInfo.do?prdNo=5565493696",
+            "price": 195130,
+            "img": "http://localhost:8000/media/items/5565493696_l_tlFAZoO.jpeg"
+        },
+        {
+            "id": 3,
+            "user": {
+                "email": "swkang@fastcampus.co.kr"
+            },
+            "public_visibility": true,
+            "like_users": [],
+            "category": "디지털/가전제품",
+            "is_purchase": false,
+            "purchase_date": null,
+            "created_time": "2018-06-19T12:01:20.108318",
+            "modified_time": "2018-06-19T12:01:20.112680",
+            "name": "Apple 공인판매점 MacBook Pro [MPXY2KH/A] 13형 512G",
+            "purchase_url": "http://www.11st.co.kr/product/SellerProductDetail.tmall?method=getSellerProductDetail&prdNo=1780658921",
+            "price": 2425000,
+            "img": "http://localhost:8000/media/items/1780658921_B_7qe0lBx.jpeg"
+        }
+    ]
 }
 ```
 {% endapi-method-response-example %}
