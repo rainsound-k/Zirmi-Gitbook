@@ -229,7 +229,7 @@ Token &lt;발급 받은 토큰 key&gt;
 {% api-method-response-example-description %}
 case1: header에 Token 값이 없을 경우.   
 case2: Token 값이 틀렸을 경우.  
-case3: name or price or category 없는 경우. 
+case3: name or price or category 가 없는 경우. 
 {% endapi-method-response-example-description %}
 
 ```javascript

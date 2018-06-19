@@ -193,6 +193,7 @@ case2: Token 값이 틀렸을 경우.
 case3: 아이템 user가 아닐 경우.  
 case4: 없는 item\_pk 값일 경우.
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
     "_comment": "case1",
