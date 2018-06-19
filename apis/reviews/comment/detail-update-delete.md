@@ -88,7 +88,7 @@ Update
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -120,7 +120,7 @@ Delete
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
