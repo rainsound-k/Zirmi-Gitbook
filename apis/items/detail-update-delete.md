@@ -1,37 +1,21 @@
 # Detail, Update, Delete
 
-{% api-method method="get" host="https://api.cakes.com" path="/v1/cakes/:id" %}
+{% api-method method="get" host="https://zirmi.com" path="/api/items/<item\_pk>/" %}
 {% api-method-summary %}
 Detail
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get free cakes.
+아이템 detail을 위한 API 
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" %}
-ID of the cake to get, for free of course.
+{% api-method-parameter name="item\_pk" type="integer" required=true %}
+item pk 값 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
-
-{% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-Authentication token to track down who is emptying our stocks.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
-{% api-method-query-parameters %}
-{% api-method-parameter name="recipe" type="string" %}
-The API will do its best to find a cake matching the provided recipe.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="gluten" type="boolean" %}
-Whether the cake should be gluten-free or not.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -64,22 +48,46 @@ Could not find a cake matching this query.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="" path="" %}
+{% api-method method="put" host="https://zirmi.com" path="/api/items/<item\_pk>/" %}
 {% api-method-summary %}
 Update
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+ 아이템 update를 위한 API 
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
+{% api-method-parameter name="item\_pk" type="integer" required=true %}
+item pk 값 
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Token &lt;발급 받은 토큰 key&gt; 
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
 {% api-method-parameter name="" type="string" required=false %}
 
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -96,22 +104,28 @@ Update
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="" path="" %}
+{% api-method method="delete" host="https://zirmi.com" path="/api/items/<item\_pk>/" %}
 {% api-method-summary %}
 Delete
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+ 아이템 delete를 위한 API 
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-parameter name="item\_pk" type="integer" required=true %}
+item pk 값 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Token &lt;발급 받은 토큰 key&gt; 
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
