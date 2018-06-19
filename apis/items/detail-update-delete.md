@@ -44,18 +44,6 @@ item pk 값
 }
 ```
 {% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-Could not find a cake matching this query.
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Ain't no cake like that."
-}
-```
-{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
@@ -66,7 +54,7 @@ Update
 {% endapi-method-summary %}
 
 {% api-method-description %}
- 아이템 update를 위한 API 
+아이템 update를 위한 API 
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -121,8 +109,72 @@ Token &lt;발급 받은 토큰 key&gt;
 
 {% endapi-method-response-example-description %}
 
+```javascript
+{
+    "id": 15,
+    "user": {
+        "email": "rainsound128@gmail.com"
+    },
+    "public_visibility": true,
+    "like_users": [],
+    "category": "f",
+    "is_purchase": false,
+    "purchase_date": null,
+    "created_time": "2018-06-19T13:15:33.537241",
+    "modified_time": "2018-06-19T15:28:40.469171",
+    "name": "에어팟",
+    "purchase_url": "http://www.11st.co.kr/product/SellerProductDetail.tmall?method=getSellerProductDetail&prdNo=1780658921",
+    "price": 200000,
+    "img": "http://localhost:8000/media/items/1780658921_B_2FT9KVS.jpeg"
+}
 ```
+{% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+case1: header에 Token 값이 없을 경우.   
+case2: Token 값이 틀렸을 경우.  
+case3: name or price or category 값이 없는 경우.   
+case4: 아이템 user가 아닐 경우.   
+case5: 없는 item_pk 값일 경우.  
+{% endapi-method-response-example-description %}
+```javascript
+{
+    "_comment": "case1",
+    "detail": "자격 인증데이터(authentication credentials)가 제공되지 않았습니다."
+}
+
+
+{
+    "_comment": "case2",
+    "detail": "토큰이 유효하지 않습니다."
+}
+
+
+{
+    "_comment": "case3",
+    "category": [
+        "이 필드는 필수 항목입니다."
+    ],
+    "name": [
+        "이 필드는 필수 항목입니다."
+    ],
+    "price": [
+        "이 필드는 필수 항목입니다."
+    ] 
+}
+
+
+{
+    "_comment": "case4",
+    "detail": "이 작업을 수행할 권한(permission)이 없습니다."
+}
+
+
+{
+    "_comment": "case5",
+    "detail": "찾을 수 없습니다."
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -135,7 +187,7 @@ Delete
 {% endapi-method-summary %}
 
 {% api-method-description %}
- 아이템 delete를 위한 API 
+아이템 delete를 위한 API 
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -154,28 +206,44 @@ Token &lt;발급 받은 토큰 key&gt;
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=204 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
 
 ```javascript
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example-description %}
+case1: header에 Token 값이 없을 경우.   
+case2: Token 값이 틀렸을 경우.     
+case3: 아이템 user가 아닐 경우.   
+case4: 없는 item_pk 값일 경우. 
+{% endapi-method-response-example-description %}
+```javascript
 {
-    "id": 15,
-    "user": {
-        "email": "rainsound128@gmail.com"
-    },
-    "public_visibility": true,
-    "like_users": [],
-    "category": "f",
-    "is_purchase": false,
-    "purchase_date": null,
-    "created_time": "2018-06-19T13:15:33.537241",
-    "modified_time": "2018-06-19T15:28:40.469171",
-    "name": "에어팟",
-    "purchase_url": "http://www.11st.co.kr/product/SellerProductDetail.tmall?method=getSellerProductDetail&prdNo=1780658921",
-    "price": 200000,
-    "img": "http://localhost:8000/media/items/1780658921_B_2FT9KVS.jpeg"
+    "_comment": "case1",
+    "detail": "자격 인증데이터(authentication credentials)가 제공되지 않았습니다."
+}
+
+
+{
+    "_comment": "case2",
+    "detail": "토큰이 유효하지 않습니다."
+}
+
+
+{
+    "_comment": "case3",
+    "detail": "이 작업을 수행할 권한(permission)이 없습니다."
+}
+
+
+{
+    "_comment": "case4",
+    "detail": "찾을 수 없습니다."
 }
 ```
 {% endapi-method-response-example %}
