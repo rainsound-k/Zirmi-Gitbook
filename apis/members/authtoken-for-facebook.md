@@ -16,12 +16,6 @@ AuthToken for facebook
  페이스북 액세스 토큰 
 {% endapi-method-parameter %}
 {% endapi-method-form-data-parameters %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
