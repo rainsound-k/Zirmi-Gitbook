@@ -26,9 +26,10 @@ Search
 
 ```javascript
 {
-    "name": "Cake's name",
-    "recipe": "Cake's recipe name",
-    "cake": "Binary cake"
+    "img_url": "http://gdimg.gmarket.co.kr/784175855/still/600?ver=0",
+    "price": 2019450,
+    "name": "애플 맥북프로 레티나 MJLQ2KH/A 리프레시15년형 c",
+    "purchase_url": "http://item.gmarket.co.kr/DetailView/Item.asp?goodscode=784175855"
 }
 ```
 {% endapi-method-response-example %}
