@@ -103,7 +103,7 @@ Token &lt;발급 받은 토큰 key&gt;
 {% api-method-response-example-description %}
 case1: header에 Token 값이 없을 경우.  
 case2: Token 값이 틀렸을 경우.  
-case3: name or price or category 값이 없는 경우.  
+case3: name or price or category가 없 경우.  
 case4: 아이템 user가 아닐 경우.  
 case5: 없는 item\_pk 값일 경우.
 {% endapi-method-response-example-description %}

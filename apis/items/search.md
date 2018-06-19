@@ -6,7 +6,7 @@ Search
 {% endapi-method-summary %}
 
 {% api-method-description %}
-아이템 검색을 위한 API. 
+아이템 검색을 위한 API.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -21,7 +21,7 @@ Search
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-상품 검색 성공.  
+상품 검색 성공.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -36,8 +36,8 @@ Search
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-case1: url이 없는 경우.   
-case2: url의 값이 빈칸인 경우. 
+case1: url이 없는 경우.  
+case2: url의 값이 빈칸인 경우.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -56,6 +56,4 @@ case2: url의 값이 빈칸인 경우.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 
