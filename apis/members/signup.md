@@ -11,7 +11,7 @@ Sign Up
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
+{% api-method-form-data-parameters %}
 {% api-method-parameter name="email" type="string" required=true %}
 이메일 형식  
 ex\) aaa@aaa.com
