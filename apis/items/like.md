@@ -27,11 +27,46 @@ Token &lt;발급 받은 토큰 key&gt;
 {% api-method-response %}
 {% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-좋아요.
+case1: 좋아요.   
+case2: 좋아요 취소. 
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
+    "_comment": "case1",
+    "user": {
+        "pk": 11,
+        "email": "ksw128@naver.com",
+        "generation": "20대",
+        "gender": "여성"
+    },
+    "item": {
+        "id": 1,
+        "user": {
+            "email": "rainsound128@gmail.com"
+        },
+        "public_visibility": true,
+        "like_users": [
+            {
+                "email": "windog100@hanmail.net"
+            }
+        ],
+        "category": "디지털/가전제품",
+        "is_purchase": false,
+        "purchase_date": null,
+        "created_time": "2018-06-18T14:19:39.945421",
+        "modified_time": "2018-06-18T14:19:39.947433",
+        "name": "애플 맥북프로 레티나 MJLQ2KH/A 리프레시15년형 c",
+        "purchase_url": "http://item.gmarket.co.kr/DetailView/Item.asp?goodscode=784175855",
+        "price": 1974830,
+        "img": "/media/items/600_oRzbBpu.jpeg"
+    },
+    "result": true
+}
+
+
+{
+    "_comment": "case2",
     "user": {
         "pk": 11,
         "email": "ksw128@naver.com",
