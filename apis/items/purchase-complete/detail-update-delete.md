@@ -56,6 +56,7 @@ Token &lt;발급 받은 토큰 key&gt;
 case1: header에 Token 값이 없을 경우.  
 case2: Token 값이 틀렸을 경우.
 {% endapi-method-response-example-description %}
+
 ```javascript
 {
     "_comment": "case1",
@@ -106,16 +107,16 @@ Token &lt;발급 받은 토큰 key&gt;
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="category" type="string" required=true %}
-패션의류/잡화: a   
+패션의류/잡화: a  
 유아용품: b  
-뷰티: c   
-주방/생활용품: d   
-디지털/가전제품: e   
-가구/인테리어: f   
-운동용품: g   
-여행: h   
-도서/음반/공연: i   
-자동차용품: j   
+뷰티: c  
+주방/생활용품: d  
+디지털/가전제품: e  
+가구/인테리어: f  
+운동용품: g  
+여행: h  
+도서/음반/공연: i  
+자동차용품: j  
 기타: k
 {% endapi-method-parameter %}
 
@@ -162,7 +163,7 @@ Token &lt;발급 받은 토큰 key&gt;
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-name or price or category가 없는 경우.  
+name or price or category가 없는 경우.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -202,7 +203,7 @@ case2: Token 값이 틀렸을 경우.
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-아이템 user가 아닐 경우.  
+아이템 user가 아닐 경우.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -214,7 +215,7 @@ case2: Token 값이 틀렸을 경우.
 
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
-없는 item\_pk 값일 경우.   
+없는 item\_pk 값일 경우.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -284,7 +285,7 @@ case2: Token 값이 틀렸을 경우.
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
- 아이템의 user가 아닐 경우.  
+아이템의 user가 아닐 경우.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -296,7 +297,7 @@ case2: Token 값이 틀렸을 경우.
 
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
- 없는 item\_pk 값일 경우.  
+없는 item\_pk 값일 경우.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -308,5 +309,4 @@ case2: Token 값이 틀렸을 경우.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
 
