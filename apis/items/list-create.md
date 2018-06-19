@@ -2,7 +2,7 @@
 
 {% api-method method="get" host="https://zirmi.com" path="/api/items/" %}
 {% api-method-summary %}
- sList
+List
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -154,25 +154,74 @@ Create
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-ad 
+Token <발급 받은 토큰 key> 
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-form-data-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-parameter name="name" type="string" required=true %}
+아이템명
+{% endapi-method-parameter %}
 
+{% api-method-parameter name="price" type="integer" required=true %}
+아이템 가격
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="category" type="string" required=true %}
+패션의류/잡화: a
+유아용품: b
+뷰티: c
+주방/생활용품: d
+디지털/가전제품: e
+가구/인테리어: f
+운동용품: g
+여행: h
+도서/음반/공연: i
+자동차용품: j
+기타: k
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="purchase\_url" type="string" required=false %}
+상품 구매 링크(URL 형식)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="img" type="string" required=false %}
+상품 이미지
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="public\_visibility" type="string" required=false %}
+전체 공개 여부(defaut=True)
 {% endapi-method-parameter %}
 {% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-
+아이템 생성완료.
 {% endapi-method-response-example-description %}
 
-```text
-
+```javascript
+{
+    "detail": "아이템이 생성되었습니다",
+    "item": {
+        "id": 14,
+        "user": {
+            "email": "windog100@hanmail.net"
+        },
+        "public_visibility": true,
+        "like_users": [],
+        "category": "뷰티",
+        "is_purchase": false,
+        "purchase_date": null,
+        "created_time": "2018-06-19T12:56:38.001652",
+        "modified_time": "2018-06-19T12:56:38.007632",
+        "name": "test3",
+        "purchase_url": "http://www.11st.co.kr/product/SellerProductDetail.tmall?method=getSellerProductDetail&prdNo=1780658921",
+        "price": 150000,
+        "img": "/media/items/1780658921_B_AcLDuqt.jpeg"
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
