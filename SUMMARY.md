@@ -19,6 +19,7 @@
     * [Item add from public list](apis/items/item-add-from-public-list.md)
     * [Comment](apis/items/comment/README.md)
       * [List, Create](apis/items/comment/list-create.md)
+      * [Detail, Update, Delete](apis/items/comment/detail-update-delete.md)
   * [Reviews](apis/reviews/README.md)
     * [List, Create](apis/reviews/list-create.md)
     * [Search](apis/reviews/search.md)

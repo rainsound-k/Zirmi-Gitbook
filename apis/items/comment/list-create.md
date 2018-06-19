@@ -84,7 +84,7 @@ item pk 값
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-Token &lt;발급 받은 토큰 key&gt; 
+Token &lt;발급 받은 토큰 key&gt;
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -114,7 +114,7 @@ Token &lt;발급 받은 토큰 key&gt;
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-content가 없는 경우.  
+content가 없는 경우.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -128,7 +128,7 @@ content가 없는 경우.
 
 {% api-method-response-example httpCode=401 %}
 {% api-method-response-example-description %}
-case1: header에 Token 값이 없을 경우.   
+case1: header에 Token 값이 없을 경우.  
 case2: Token 값이 틀렸을 경우.
 {% endapi-method-response-example-description %}
 
