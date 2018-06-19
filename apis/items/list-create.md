@@ -39,7 +39,7 @@ page 숫자\(page 당 아이템 5개\)
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-리스트 출력. 
+리스트 출력.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -154,7 +154,7 @@ Create
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-Token <발급 받은 토큰 key> 
+Token &lt;발급 받은 토큰 key&gt;
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -168,29 +168,29 @@ Token <발급 받은 토큰 key>
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="category" type="string" required=true %}
-패션의류/잡화: a
-유아용품: b
-뷰티: c
-주방/생활용품: d
-디지털/가전제품: e
-가구/인테리어: f
-운동용품: g
-여행: h
-도서/음반/공연: i
-자동차용품: j
+패션의류/잡화: a   
+유아용품: b  
+뷰티: c   
+주방/생활용품: d   
+디지털/가전제품: e   
+가구/인테리어: f   
+운동용품: g   
+여행: h   
+도서/음반/공연: i   
+자동차용품: j   
 기타: k
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="purchase\_url" type="string" required=false %}
-상품 구매 링크(URL 형식)
+상품 구매 링크\(URL 형식\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="img" type="string" required=false %}
-상품 이미지
+{% api-method-parameter name="img" type="object" required=false %}
+상품 이미지\(파일 업로드\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="public\_visibility" type="string" required=false %}
-전체 공개 여부(defaut=True)
+{% api-method-parameter name="public\_visibility" type="boolean" required=false %}
+전체 공개 여부\(defaut=True\)
 {% endapi-method-parameter %}
 {% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
@@ -221,6 +221,33 @@ Token <발급 받은 토큰 key>
         "price": 150000,
         "img": "/media/items/1780658921_B_AcLDuqt.jpeg"
     }
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+case1: header에 Token 값이 없을 경우.   
+case2: Token 값이 틀렸을 경우.  
+case3: name or price or category 값이 없는 경우. 
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "_comment": "case1",
+    "detail": "자격 인증데이터(authentication credentials)가 제공되지 않았습니다."
+}
+
+
+{
+    "_comment": "case2",
+    "detail": "토큰이 유효하지 않습니다."
+}
+
+
+{
+    "_comment": "case3",
+    "detail": "name, price, category를 입력해주세요"
 }
 ```
 {% endapi-method-response-example %}
