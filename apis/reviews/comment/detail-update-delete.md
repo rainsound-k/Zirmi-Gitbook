@@ -1,2 +1,0 @@
-# Detail, Update, Delete
-
