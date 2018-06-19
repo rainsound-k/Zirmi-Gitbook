@@ -11,7 +11,7 @@ Login
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
+{% api-method-form-data-parameters %}
 {% api-method-parameter name="email" type="string" required=true %}
 이메일
 {% endapi-method-parameter %}
@@ -19,7 +19,7 @@ Login
 {% api-method-parameter name="password" type="string" required=true %}
 비밀번호
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
