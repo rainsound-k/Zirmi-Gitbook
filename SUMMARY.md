@@ -15,6 +15,7 @@
     * [Like](apis/items/like.md)
     * [Purchase complete](apis/items/purchase-complete/README.md)
       * [List](apis/items/purchase-complete/list.md)
+      * [Detail, Update, Delete](apis/items/purchase-complete/detail-update-delete.md)
     * [Item add from public list](apis/items/item-add-from-public-list.md)
     * [Comment](apis/items/comment/README.md)
       * [List, Create](apis/items/comment/list-create.md)
