@@ -21,14 +21,26 @@ item pk 값
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+아이템 detail 정상 출력.
 {% endapi-method-response-example-description %}
 
 ```javascript
 {
-    "name": "Cake's name",
-    "recipe": "Cake's recipe name",
-    "cake": "Binary cake"
+    "id": 7,
+    "user": {
+        "email": "rainsound128@gmail.com"
+    },
+    "public_visibility": true,
+    "like_users": [],
+    "category": "디지털/가전제품",
+    "is_purchase": false,
+    "purchase_date": null,
+    "created_time": "2018-06-19T12:02:52.328046",
+    "modified_time": "2018-06-19T12:02:52.330643",
+    "name": "카도 미니 가시광촉매 차량용 공기청정기 실버",
+    "purchase_url": "https://www.coupang.com/vp/products/29576028",
+    "price": 253920,
+    "img": "http://localhost:8000/media/items/6bf2c6f5-90c6-4d47-81fa-71e7c4ed4ad3.jpeg"
 }
 ```
 {% endapi-method-response-example %}
@@ -71,23 +83,36 @@ Token &lt;발급 받은 토큰 key&gt;
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-parameter name="price" type="integer" required=true %}
+아이템 가격
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-parameter name="category" type="string" required=true %}
+패션의류/잡화: a   
+유아용품: b  
+뷰티: c   
+주방/생활용품: d   
+디지털/가전제품: e   
+가구/인테리어: f   
+운동용품: g   
+여행: h   
+도서/음반/공연: i   
+자동차용품: j   
+기타: k
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-parameter name="purchase\_url" type="string" required=false %}
+상품 구매 링크\(URL 형식\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-parameter name="img" type="object" required=false %}
+상품 이미지\(파일 업로드\)
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+
+{% api-method-parameter name="public\_visibility" type="boolean" required=false %}
+전체 공개 여부\(defaut=True\)
+{% endapi-method-parameter %}
+{% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -134,8 +159,24 @@ Token &lt;발급 받은 토큰 key&gt;
 
 {% endapi-method-response-example-description %}
 
-```
-
+```javascript
+{
+    "id": 15,
+    "user": {
+        "email": "rainsound128@gmail.com"
+    },
+    "public_visibility": true,
+    "like_users": [],
+    "category": "f",
+    "is_purchase": false,
+    "purchase_date": null,
+    "created_time": "2018-06-19T13:15:33.537241",
+    "modified_time": "2018-06-19T15:28:40.469171",
+    "name": "에어팟",
+    "purchase_url": "http://www.11st.co.kr/product/SellerProductDetail.tmall?method=getSellerProductDetail&prdNo=1780658921",
+    "price": 200000,
+    "img": "http://localhost:8000/media/items/1780658921_B_2FT9KVS.jpeg"
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
