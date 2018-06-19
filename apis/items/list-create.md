@@ -39,7 +39,7 @@ page 숫자\(page 당 아이템 5개\)
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-리스트 출력.
+아이템 리스트 정상 출력.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -198,7 +198,7 @@ Token &lt;발급 받은 토큰 key&gt;
 {% api-method-response %}
 {% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-아이템 생성완료.
+아이템 생성 성공.  
 {% endapi-method-response-example-description %}
 
 ```javascript

@@ -27,7 +27,7 @@ page 숫자\(page 당 아이템 5개\)
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-구매 완료한 아이템 list 정상 출력.
+구매 완료한 아이템 리스 정상 출력.
 {% endapi-method-response-example-description %}
 
 ```javascript

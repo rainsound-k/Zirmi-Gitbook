@@ -27,7 +27,7 @@ Token &lt;발급 받은 토큰 key&gt;
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-구매 완료한 아이템 detail 정상 출력.
+구매 완료한 아이템 상세 정보 정상 출력.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -137,7 +137,7 @@ Token &lt;발급 받은 토큰 key&gt;
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+ 구매 완료한 아이템 업데이트 성공. 
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -234,7 +234,7 @@ Delete
 {% endapi-method-summary %}
 
 {% api-method-description %}
-아이템 삭제를 위한 API
+구매 완료한 아이템 삭제를 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -255,7 +255,7 @@ Token &lt;발급 받은 토큰 key&gt;
 {% api-method-response %}
 {% api-method-response-example httpCode=204 %}
 {% api-method-response-example-description %}
-
+ 구매 완료한 아이템 삭제 성공.
 {% endapi-method-response-example-description %}
 
 ```javascript

@@ -6,14 +6,14 @@ Detail
 {% endapi-method-summary %}
 
 {% api-method-description %}
-댓글 상세 정보를 위한 API 
+댓글 상세 정보를 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="comment\_pk" type="integer" required=true %}
-comment pk 값   
+comment pk 값
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -21,7 +21,7 @@ comment pk 값
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-댓글 상세 정보 정상 출력. 
+댓글 상세 정보 정상 출력.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -56,25 +56,25 @@ Update
 {% endapi-method-summary %}
 
 {% api-method-description %}
- 댓글 업데이트를 위한 API  
+댓글 업데이트를 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="comment\_pk" type="integer" required=true %}
-comment pk 값   
+comment pk 값
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-Token &lt;발급 받은 토큰 key&gt;  
+Token &lt;발급 받은 토큰 key&gt;
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-form-data-parameters %}
-{% api-method-parameter name="content" type="string" required=false %}
+{% api-method-parameter name="content" type="string" required=true %}
 댓글 내용
 {% endapi-method-parameter %}
 {% endapi-method-form-data-parameters %}
@@ -164,20 +164,20 @@ Delete
 {% endapi-method-summary %}
 
 {% api-method-description %}
-댓글 삭제를 위한 API  
+댓글 삭제를 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="comment\_pk" type="integer" required=true %}
-comment pk 값  
+comment pk 값
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" type="string" required=true %}
-Token &lt;발급 받은 토큰 key&gt;  
+Token &lt;발급 받은 토큰 key&gt;
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -239,6 +239,4 @@ case2: Token 값이 틀렸을 경우.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 

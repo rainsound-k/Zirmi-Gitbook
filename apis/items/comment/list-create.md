@@ -89,7 +89,7 @@ Token &lt;발급 받은 토큰 key&gt;
 {% endapi-method-headers %}
 
 {% api-method-form-data-parameters %}
-{% api-method-parameter name="content" type="string" required=false %}
+{% api-method-parameter name="content" type="string" required=true %}
 댓글 내용
 {% endapi-method-parameter %}
 {% endapi-method-form-data-parameters %}
@@ -98,7 +98,7 @@ Token &lt;발급 받은 토큰 key&gt;
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-댓글 작성 성공.
+댓글 생성 성공.  
 {% endapi-method-response-example-description %}
 
 ```javascript
