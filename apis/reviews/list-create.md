@@ -20,6 +20,7 @@ page 숫자\(page 당 아이템 5개\)
 뷰수 많은순: -view\_count  
 뷰수 적은순: view\_count
 {% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
