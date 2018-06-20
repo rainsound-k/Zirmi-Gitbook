@@ -102,7 +102,7 @@ Token &lt;발급 받은 토큰 key&gt;
 {% api-method-response %}
 {% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
-리뷰 생성 성공.  
+리뷰 생성 성공.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -123,7 +123,7 @@ Token &lt;발급 받은 토큰 key&gt;
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-case1: item or title or content가 없는 경우.    
+case1: item or title or content가 없는 경우.  
 case2: 구매 완료한 아이템 pk가 아닌 경우.
 {% endapi-method-response-example-description %}
 
@@ -153,7 +153,7 @@ case2: 구매 완료한 아이템 pk가 아닌 경우.
 
 {% api-method-response-example httpCode=401 %}
 {% api-method-response-example-description %}
-case1: header에 Token 값이 없을 경우.   
+case1: header에 Token 값이 없을 경우.  
 case2: Token 값이 틀렸을 경우.
 {% endapi-method-response-example-description %}
 
@@ -173,6 +173,4 @@ case2: Token 값이 틀렸을 경우.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 
