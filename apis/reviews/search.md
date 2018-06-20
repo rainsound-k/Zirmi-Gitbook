@@ -6,7 +6,7 @@ Search
 {% endapi-method-summary %}
 
 {% api-method-description %}
-리뷰 검색을 위한 API 
+리뷰 검색을 위한 API
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -16,11 +16,11 @@ Search
 제목으로 검색: title  
 내용으로 검색: content  
 아이템명으로 검색: item  
-전체 검색: all  
+전체 검색: all
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="keyword" type="string" required=false %}
-검색할 내용(입력 안할시 전체 리스트 출력)  
+검색할 내용\(입력 안할시 전체 리스트 출력\)
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -28,7 +28,7 @@ Search
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-case1: 리뷰 검색 성공.   
+case1: 리뷰 검색 성공.  
 case2: 검색 결과가 없을 경우.
 {% endapi-method-response-example-description %}
 
@@ -59,7 +59,7 @@ case2: 검색 결과가 없을 경우.
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-case1: sort가 없을 경우.   
+case1: sort가 없을 경우.  
 case2: keyword는 있지만 sort가 title, content, item, all 중 하나가 아닐 경우.
 {% endapi-method-response-example-description %}
 
@@ -79,6 +79,4 @@ case2: keyword는 있지만 sort가 title, content, item, all 중 하나가 아�
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 

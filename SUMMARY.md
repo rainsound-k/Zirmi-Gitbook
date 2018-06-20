@@ -24,5 +24,6 @@
     * [List, Create](apis/reviews/list-create.md)
     * [Detail, Update, Delete](apis/reviews/detail-update-delete.md)
     * [Search](apis/reviews/search.md)
-    * [Comment](apis/reviews/comment.md)
+    * [Comment](apis/reviews/comment/README.md)
+      * [List, Create](apis/reviews/comment/list-create.md)
 
