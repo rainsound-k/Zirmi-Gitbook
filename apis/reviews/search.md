@@ -24,7 +24,7 @@ Search
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=false %}
-page 숫자(page 당 리뷰 5개)
+page 숫자\(page 당 리뷰 5개\)
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
