@@ -111,7 +111,7 @@ Token &lt;발급 받은 토큰 key&gt;
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
- 아이템 업데이트 성공. 
+아이템 업데이트 성공. 
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -177,7 +177,7 @@ case2: Token 값이 틀렸을 경우.
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
-아이템 user가 아닐 경우.
+아이템의 user가 아닐 경우.
 {% endapi-method-response-example-description %}
 
 ```javascript
@@ -229,7 +229,7 @@ Token &lt;발급 받은 토큰 key&gt;
 {% api-method-response %}
 {% api-method-response-example httpCode=204 %}
 {% api-method-response-example-description %}
- 아이템 삭제 성공. 
+아이템 삭제 성공. 
 {% endapi-method-response-example-description %}
 
 ```javascript
