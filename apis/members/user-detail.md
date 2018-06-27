@@ -1,6 +1,6 @@
 # User detail
 
-{% api-method method="get" host="https://zirmi.com" path="/api/members/info/" %}
+{% api-method method="get" host="https://zirmi.net" path="/frontend-api/members/info/" %}
 {% api-method-summary %}
 User detail
 {% endapi-method-summary %}

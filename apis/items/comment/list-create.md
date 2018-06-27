@@ -1,6 +1,6 @@
 # List, Create
 
-{% api-method method="get" host="https://zirmi.com" path="/api/items/<item\_pk>/comment/" %}
+{% api-method method="get" host="https://zirmi.net" path="/frontend-api/items/<item\_pk>/comment/" %}
 {% api-method-summary %}
 List
 {% endapi-method-summary %}
@@ -65,7 +65,7 @@ page 숫자\(page 당 댓글 5개\)
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://zirmi.com" path="/api/items/<item\_pk>/comment/" %}
+{% api-method method="post" host="https://zirmi.net" path="/frontend-api/items/<item\_pk>/comment/" %}
 {% api-method-summary %}
 Create
 {% endapi-method-summary %}

@@ -1,6 +1,6 @@
 # Logout
 
-{% api-method method="post" host="https://zirmi.com" path="/api/members/logout/" %}
+{% api-method method="post" host="https://zirmi.net" path="/frontend-api/members/logout/" %}
 {% api-method-summary %}
 Logout
 {% endapi-method-summary %}

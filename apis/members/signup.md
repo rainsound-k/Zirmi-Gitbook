@@ -1,6 +1,6 @@
 # SignUp
 
-{% api-method method="post" host="https://zirmi.com" path="/api/members/signup/" %}
+{% api-method method="post" host="https://zirmi.net" path="/frontend-api/members/signup/" %}
 {% api-method-summary %}
 Sign Up
 {% endapi-method-summary %}

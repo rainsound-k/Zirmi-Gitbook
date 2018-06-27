@@ -1,6 +1,6 @@
 # Detail, Update, Delete
 
-{% api-method method="get" host="https://zirmi.com" path="/api/items/complete/list/<item\_pk>/" %}
+{% api-method method="get" host="https://zirmi.net" path="/frontend-api/items/complete/list/<item\_pk>/" %}
 {% api-method-summary %}
 Detail
 {% endapi-method-summary %}

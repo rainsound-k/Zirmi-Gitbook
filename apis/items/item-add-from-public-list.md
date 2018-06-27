@@ -1,6 +1,6 @@
 # Item add from public list
 
-{% api-method method="get" host="https://zirmi.com" path="/api/items/public/add/" %}
+{% api-method method="get" host="https://zirmi.net" path="/frontend-api/items/public/add/" %}
 {% api-method-summary %}
 Item add from public list
 {% endapi-method-summary %}

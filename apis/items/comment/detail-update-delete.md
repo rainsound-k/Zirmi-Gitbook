@@ -1,6 +1,6 @@
 # Detail, Update, Delete
 
-{% api-method method="get" host="https://zirmi.com" path="/api/items/comment/<comment\_pk>/" %}
+{% api-method method="get" host="https://zirmi.net" path="/frontend-api/items/comment/<comment\_pk>/" %}
 {% api-method-summary %}
 Detail
 {% endapi-method-summary %}
@@ -50,7 +50,7 @@ comment pk 값
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="https://zirmi.com" path="/api/items/comment/<comment\_pk>/" %}
+{% api-method method="put" host="https://zirmi.net" path="/frontend-api/items/comment/<comment\_pk>/" %}
 {% api-method-summary %}
 Update
 {% endapi-method-summary %}
@@ -158,7 +158,7 @@ case2: Token 값이 틀렸을 경우.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="https://zirmi.com" path="/api/items/comment/<comment\_pk>/" %}
+{% api-method method="delete" host="https://zirmi.net" path="/frontend-api/items/comment/<comment\_pk>/" %}
 {% api-method-summary %}
 Delete
 {% endapi-method-summary %}

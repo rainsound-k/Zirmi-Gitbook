@@ -1,6 +1,6 @@
 # AuthToken for facebook
 
-{% api-method method="post" host="https://zirmi.com" path="/api/members/facebook-auth-token/" %}
+{% api-method method="post" host="https://zirmi.net" path="/frontend-api/members/facebook-auth-token/" %}
 {% api-method-summary %}
 AuthToken for facebook
 {% endapi-method-summary %}

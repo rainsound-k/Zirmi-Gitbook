@@ -1,6 +1,6 @@
 # Like
 
-{% api-method method="post" host="https://zirmi.com" path="/api/items/<item\_pk>/like/" %}
+{% api-method method="post" host="https://zirmi.net" path="/frontend-api/items/<item\_pk>/like/" %}
 {% api-method-summary %}
 Like
 {% endapi-method-summary %}

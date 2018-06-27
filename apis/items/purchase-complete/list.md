@@ -1,6 +1,6 @@
 # List
 
-{% api-method method="get" host="https://zirmi.com" path="/api/items/complete/list/" %}
+{% api-method method="get" host="https://zirmi.net" path="/frontend-api/items/complete/list/" %}
 {% api-method-summary %}
 List
 {% endapi-method-summary %}

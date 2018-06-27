@@ -1,6 +1,6 @@
 # Search
 
-{% api-method method="get" host="https://zirmi.com" path="/api/reviews/search/" %}
+{% api-method method="get" host="https://zirmi.net" path="/frontend-api/reviews/search/" %}
 {% api-method-summary %}
 Search
 {% endapi-method-summary %}

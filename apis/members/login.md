@@ -1,6 +1,6 @@
 # Login
 
-{% api-method method="post" host="https://zirmi.com" path="/api/members/login/" %}
+{% api-method method="post" host="https://zirmi.net" path="/frontend-api/members/login/" %}
 {% api-method-summary %}
 Login
 {% endapi-method-summary %}
