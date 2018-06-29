@@ -6,7 +6,9 @@ Search
 {% endapi-method-summary %}
 
 {% api-method-description %}
-아이템 검색을 위한 API.
+아이템 검색을 위한 API  
+  
+자동 크롤링 지원 가능 쇼핑몰 목록 - 11번가, 지마켓, 옥션, 인터파크, 네이버 스마트 스토어, 롯데몰, 현대몰, 신세계몰, gsshop, 갤러리아, ak몰, 농수산몰, 위메프, 티몬, 지9\(일부\)  
 {% endapi-method-description %}
 
 {% api-method-spec %}
